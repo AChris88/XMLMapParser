@@ -7,15 +7,15 @@ class Map
 {
 public:
 	Map();
-	Map(int height, int width);
+	Map(int rows, int cols);
 	~Map();
 
 	Map& operator=(Map& map);
 
 	void setTile(int x, int y, int val);
 	const std::vector<std::vector<int>> getMap();
-	int getWidth() const;
-	int getHeight() const;
+	int getCols() const;
+	int getRows() const;
 	int getTile(int x, int y) const;
 	void printMap() const;
 private:
@@ -24,8 +24,8 @@ private:
 	const int MIN_MAP_WIDTH = 8;
 	const int MIN_MAP_HEIGHT = 8;
 
-	int width;
-	int height;
+	int cols;
+	int rows;
 	std::vector<std::vector<int> > map;
 };
 

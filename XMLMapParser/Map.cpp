@@ -10,11 +10,11 @@ Map::Map()
 	this->map = std::vector<std::vector<int> >(0, std::vector<int>(0, 0));
 }
 
-Map::Map(int height, int width)
+Map::Map(int rows, int cols)
 {
-	this->height = height;
-	this->width = width;
-	this->map = std::vector<std::vector<int> >(height, std::vector<int>(width, 0));
+	this->rows = rows;
+	this->cols = cols;
+	this->map = std::vector<std::vector<int> >(rows, std::vector<int>(cols, 0));
 }
 
 Map::~Map()
@@ -31,6 +31,14 @@ Map& Map::operator=(Map& map)
 }
 
 void Map::setTile(int x, int y, int val){
+	/* acceptable vals
+	*  0 = scenery
+	*  1 = path
+	*  2 = tower
+	*  3 = start
+	*  4 = end
+	*/
+
 	//add validation
 	map[x][y] = val;
 }
@@ -48,14 +56,14 @@ const std::vector<std::vector<int>> Map::getMap(){
 	return map;
 }
 
-int Map::getHeight() const{
+int Map::getRows() const{
 	return map.size();
 }
 
-int Map::getWidth() const{
+int Map::getCols() const{
 	return map[0].size();
 }
 
-int Map::getTile(int x, int y) const {
-	return map[x][y];
+int Map::getTile(int row, int col) const {
+	return map[row][col];
 }

@@ -14,11 +14,14 @@ public:
 	void saveMap(std::string saveDir);
 
 	~MapEditor();
+
+	void MapEditor::setTile(int row, int col, int val);
 private:
 	Map map;
 	xml_document<> doc;
 
-	bool validateMap(Map* map);
+	bool validateMap() const;
+	void createNewMap();
 	void loadMapFile(std::string mapDir);
 	void importMap() const;
 	void printMap() const;

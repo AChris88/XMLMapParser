@@ -19,11 +19,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	std::string mapDir = "C:/XMLTestFile.xml";
 	std::string saveDir = "C:/savedMap.xml";
 
+	//MapEditor* editor = new MapEditor();
 	MapEditor editor(mapDir);
-
-
-
-
+	editor.saveMap(saveDir);
 
 	cin.get();
 	return 0;
