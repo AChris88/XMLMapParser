@@ -1,42 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map rows="15" cols="16">
 	<row>
-		<tile access="3"/>
-		<tile access="0"/>
-		<tile access="0"/>
-		<tile access="0"/>
-		<tile access="0"/>
-		<tile access="0"/>
-		<tile access="0"/>
-		<tile access="0"/>
-		<tile access="0"/>
-		<tile access="0"/>
-		<tile access="0"/>
-		<tile access="0"/>
-		<tile access="0"/>
-		<tile access="0"/>
-		<tile access="0"/>
-		<tile access="0"/>
-	</row>
-	<row>
-		<tile access="1"/>
-		<tile access="1"/>
-		<tile access="1"/>
-		<tile access="1"/>
-		<tile access="1"/>
-		<tile access="1"/>
-		<tile access="1"/>
-		<tile access="1"/>
-		<tile access="1"/>
-		<tile access="1"/>
-		<tile access="1"/>
-		<tile access="1"/>
-		<tile access="1"/>
-		<tile access="1"/>
-		<tile access="1"/>
-		<tile access="1"/>
-	</row>
-	<row>
 		<tile access="0"/>
 		<tile access="0"/>
 		<tile access="0"/>
@@ -268,6 +232,42 @@
 		<tile access="0"/>
 		<tile access="0"/>
 		<tile access="0"/>
-		<tile access="4"/>
+		<tile access="0"/>
+	</row>
+	<row>
+		<tile access="1"/>
+		<tile access="1"/>
+		<tile access="1"/>
+		<tile access="1"/>
+		<tile access="1"/>
+		<tile access="1"/>
+		<tile access="1"/>
+		<tile access="1"/>
+		<tile access="1"/>
+		<tile access="1"/>
+		<tile access="1"/>
+		<tile access="1"/>
+		<tile access="1"/>
+		<tile access="1"/>
+		<tile access="1"/>
+		<tile access="1"/>
+	</row>
+	<row>
+		<tile access="0"/>
+		<tile access="0"/>
+		<tile access="0"/>
+		<tile access="0"/>
+		<tile access="0"/>
+		<tile access="0"/>
+		<tile access="0"/>
+		<tile access="0"/>
+		<tile access="0"/>
+		<tile access="0"/>
+		<tile access="0"/>
+		<tile access="0"/>
+		<tile access="0"/>
+		<tile access="0"/>
+		<tile access="0"/>
+		<tile access="0"/>
 	</row>
 </map>

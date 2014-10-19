@@ -11,17 +11,21 @@ class MapEditor
 public:
 	MapEditor();
 	MapEditor(std::string mapDir);
-	void saveMap(std::string saveDir);
+	MapEditor(int rows, int cols);
 
 	~MapEditor();
 
-	void MapEditor::setTile(int row, int col, int val);
+	void saveMap(std::string saveDir);
+	void validityTest();
+	void setTile(int row, int col, int val);
 private:
 	Map map;
 	xml_document<> doc;
 
+	bool isConnected(int x, int y) const;
 	bool validateMap() const;
-	void createNewMap();
+	void createCustomMap();
+	void createNewMap(int rows, int cols);
 	void loadMapFile(std::string mapDir);
 	void importMap() const;
 	void printMap() const;

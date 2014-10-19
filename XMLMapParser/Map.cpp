@@ -21,15 +21,6 @@ Map::~Map()
 {
 }
 
-Map& Map::operator=(Map& map)
-{
-	if (this != &map)
-	{
-		swap(this->map, map.map);
-	}
-	return *this;
-}
-
 void Map::setTile(int x, int y, int val){
 	/* acceptable vals
 	*  0 = scenery
@@ -39,8 +30,11 @@ void Map::setTile(int x, int y, int val){
 	*  4 = end
 	*/
 
-	//add validation
-	map[x][y] = val;
+	//checking that x and y are within map range and that value is valid
+	if (x >= 0 && x <= (getRows() - 1) && 
+		y >= 0 && y <= (getCols() - 1) && 
+		(val >= 0 && val <=4))
+			map[x][y] = val;
 }
 
 //printing map for testing
@@ -52,18 +46,25 @@ void Map::printMap() const {
 	}
 }
 
+/*
 const std::vector<std::vector<int>> Map::getMap(){
 	return map;
 }
+*/
 
+//return the number of rows in the map
 int Map::getRows() const{
 	return map.size();
 }
 
+//returns the number of columns in the map
 int Map::getCols() const{
 	return map[0].size();
 }
 
-int Map::getTile(int row, int col) const {
-	return map[row][col];
+//retrieves that value at a specified x, y index
+int Map::getTile(int x, int y) const {
+	if (x >= 0 && x <= (getRows() - 1) &&
+		y >= 0 && y <= (getCols() - 1))
+		return map[x][y];
 }
